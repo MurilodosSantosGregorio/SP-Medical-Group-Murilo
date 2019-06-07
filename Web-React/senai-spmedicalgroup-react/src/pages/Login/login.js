@@ -24,7 +24,7 @@ class Login extends Component {
         event.preventDefault();
         // alert(this.state.email + " - " + this.state.senha);
 
-        Axios.post('http://localhost:5001/api/login', {
+        Axios.post('http://localhost:5000/api/login', {
             email: this.state.email,
             senha: this.state.senha
         })
@@ -57,11 +57,11 @@ class Login extends Component {
         return (
             <div className="Content">
 
-                <img src="img/icon-login.png" className="login-body-image"></img>
+                <img src="../../assets/imagens/icon-login.png" className="login-body-image"></img>
 
                 <h1>Faça seu Login</h1>
 
-                <form>
+                <form onSubmit={this.efetualogin.bind(this)}>
                     <div className="login-body-input">
                         <label>
                             <input type="email" placeholder="Digite se email" onChange={this.atualizaEstadoEmail.bind(this)} value={this.state.email}></input>

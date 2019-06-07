@@ -14,7 +14,7 @@ namespace Senai.SpMedicalGroup.WebApi.ViewModel
 
         [Required(ErrorMessage = "Senha deve ser informada")]
         [DataType(DataType.Password)]
-        [StringLength(30, MinimumLength = 4, ErrorMessage = "Senha deve possuir pelo menos 4 caracteres.")]
+        [StringLength(30, MinimumLength = 6, ErrorMessage = "Senha deve possuir pelo menos 4 caracteres.")]
         public string Senha { get; set; }
     }
 }
